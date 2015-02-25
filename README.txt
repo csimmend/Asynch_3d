@@ -23,8 +23,8 @@ Table of contents
 1. Overview
 ==============================================================================
 
-This is the release of the Asynch_3d.  This kernel is an attempt at
-establishing a small but meaningful benchmark for notification based 
+This is the release of the Asynch_3d proxy.  This kernel is an attempt at
+establishing a small but meaningful proxy/benchmark for notification based 
 1-sided communication. 
 
 The kernel calculates a recursive stencil via pipelined parallelism. While 
