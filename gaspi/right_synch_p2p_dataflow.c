@@ -52,7 +52,7 @@ int main (int argc, char *argv[])
   ASSERT(nProc == nProcG);
 
   gaspi_number_t notification_num;
-  gaspi_notification_num (&notification_num);
+  SUCCESS_OR_DIE (gaspi_notification_num (&notification_num));
   ASSERT(K_SZ*nThreads <= notification_num);
 
  // num threads
