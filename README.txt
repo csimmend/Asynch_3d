@@ -74,9 +74,9 @@ in the ./mpi and ./gaspi directories.
    require support for MPI_THREAD_MULTIPLE.
  
 3) GASPI can make use of the startup mechanisms of MPI. Start the
-   hybrid.f6.exe hybrid MPI/GASPI executable as a regular hybrid OpenMP/MPI 
-   application, e.g  mpirun -np 12 -machinefile machines -perhost 2 
-   ./right_synch_p2p_dataflow.exe
+   right_synch_p2p_dataflow.exe hybrid MPI/GASPI executable as a regular 
+   hybrid OpenMP/MPI application, e.g  
+   mpirun -np 12 -machinefile machines -perhost 2 ./right_synch_p2p_dataflow.exe
 
 ==============================================================================
 5. MPI
