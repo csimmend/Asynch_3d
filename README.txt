@@ -1,4 +1,4 @@
-                            Asynch_3d
+                           Asynch_3d
                           Version 0.9
                              README
 
@@ -65,7 +65,7 @@ in the ./mpi and gaspi directories directory.
 4. Configuration
 ==============================================================================
 
-1) Download and install the required software packages, netcdf, MPI, GPI2.
+1) Download and install the required software packages, MPI, GPI2.
    Note : GPI2 needs to be compiled against your MPI library of choice in 
    order to use the  MPI interoperabilty mode. 
    (./install.sh --with-mpi=/../../foo -p PREFIX)
