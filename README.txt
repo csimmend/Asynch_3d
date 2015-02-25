@@ -106,7 +106,7 @@ is completely different. In the GASPI implementation, the process which
 starts the parallel pipeline can potentially issue several thousands 
 (nThreads * K-dim) of write  notifications, before the (right) neighbouring 
 rank has even finished the first iteration. In this case the parallel pipeline 
-will never be stalled due to required data from the (left) pipeline 
+will never be stalled for lack of required data from the (left) pipeline 
 neighbour.
 
 ==============================================================================
