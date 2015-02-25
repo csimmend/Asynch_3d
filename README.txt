@@ -42,8 +42,8 @@ rather challenging.
 2.  Contents of this Distribution
 ==============================================================================
 
-This release includes source code for MPI and GASPI implementations in the
-in ./mpi and gaspi directories directory. 
+This release includes source code for MPI and GASPI implementations 
+in the ./mpi and gaspi directories directory. 
   
 ==============================================================================
 3. Hardware and Software Requirements
