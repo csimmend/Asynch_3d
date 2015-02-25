@@ -51,6 +51,10 @@ int main (int argc, char *argv[])
   ASSERT(iProc == iProcG);
   ASSERT(nProc == nProcG);
 
+  gaspi_number_t notification_num;
+  gaspi_notification_num (&notification_num);
+  ASSERT(K_SZ*nThreads <= notification_num);
+
  // num threads
   omp_set_num_threads(nThreads);
 
@@ -128,7 +132,7 @@ int main (int argc, char *argv[])
 	    if (left >= 0 )
 	      {
 		wait_for_queue_entries_for_write_notify (&queue_id);
-		gaspi_notification_id_t id, data_available = k*nThreads+tid;
+		gaspi_notification_id_t id, data_available = (k-1)*nThreads+tid;
 		SUCCESS_OR_DIE(gaspi_notify_waitsome (segment_id
 						      , data_available
 						      , 1
@@ -163,7 +167,7 @@ int main (int argc, char *argv[])
 	    // issue send
 	    if (right < nProc)
 	      {
-		gaspi_notification_id_t data_available = k*nThreads+tid;
+		gaspi_notification_id_t data_available = (k-1)*nThreads+tid;
 		wait_for_queue_entries_for_write_notify(&queue_id);
 		SUCCESS_OR_DIE ( gaspi_write_notify
 				 ( segment_id

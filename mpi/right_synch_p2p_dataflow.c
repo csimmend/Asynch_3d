@@ -113,7 +113,7 @@ int main (int argc, char *argv[])
 			   , 1
 			   , MPI_DOUBLE
 			   , left
-			   , k*nThreads+tid
+			   , (k-1)*nThreads+tid
 			   , MPI_COMM_WORLD
 			   , &status
 			   );
@@ -142,7 +142,7 @@ int main (int argc, char *argv[])
 			   , 1
 			   , MPI_DOUBLE
 			   , right
-			   , k*nThreads+tid
+			   , (k-1)*nThreads+tid
 			   , MPI_COMM_WORLD
 			   );
 	      }
