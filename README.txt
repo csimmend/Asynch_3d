@@ -76,7 +76,7 @@ in the ./mpi and ./gaspi directories.
 3) GASPI can make use of the startup mechanisms of MPI. Start the
    right_synch_p2p_dataflow.exe hybrid MPI/GASPI executable as a regular 
    hybrid OpenMP/MPI application, e.g  
-   mpirun -np 12 -machinefile machines -perhost 2 ./right_synch_p2p_dataflow.exe
+   mpirun -np 2 -machinefile machines -perhost 2 ./right_synch_p2p_dataflow.exe
 
 ==============================================================================
 5. MPI
