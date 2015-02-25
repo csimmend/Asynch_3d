@@ -43,7 +43,7 @@ rather challenging.
 ==============================================================================
 
 This release includes source code for MPI and GASPI implementations in the
-in ./mpi and gapsi directories directory. 
+in ./mpi and gaspi directories directory. 
   
 ==============================================================================
 3. Hardware and Software Requirements
@@ -103,10 +103,11 @@ entirely obvious how to do this efficiently with the current MPI-3 standard.
 The GASPI implementation uses notifications. Even though the implementation 
 looks similar to the MPI implementation, the actual underlying pattern
 is completely different. In the GASPI implementation, the process which
-starts the parallel can potentially issue several thousands (nThreads * K-dim)
-of write  notifications, before the neighbouring have even finished their first
-iteration. In this case the parallel pipeline will never be stalled due to a 
-waiting for required data from the (left) pipeline neighbour.
+starts the parallel pipeline can potentially issue several thousands 
+(nThreads * K-dim) of write  notifications, before the (right) neighbouring 
+rank has even finished the first iteration. In this case the parallel pipeline 
+will never be stalled due to required data from the (left) pipeline 
+neighbour.
 
 ==============================================================================
 8. Results
