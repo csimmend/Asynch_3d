@@ -16,7 +16,6 @@ CFLAGS += -O3 -debug
 CFLAGS += -openmp
 CFLAGS += -std=c99
 CFLAGS += -DUSE_ALIGNMENT
-CFLAGS += -DUSE_BARRIER
 CFLAGS += -DDEBUG
 
 ###############################################################################
