@@ -131,7 +131,6 @@ int main (int argc, char *argv[])
 	  {
 	    if (left >= 0 )
 	      {
-		wait_for_queue_entries_for_write_notify (&queue_id);
 		gaspi_notification_id_t id, data_available = (k-1)*nThreads+tid;
 		SUCCESS_OR_DIE(gaspi_notify_waitsome (segment_id
 						      , data_available
