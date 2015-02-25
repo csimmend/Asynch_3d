@@ -43,7 +43,7 @@ rather challenging.
 ==============================================================================
 
 This release includes source code for MPI and GASPI implementations 
-in the ./mpi and gaspi directories directory. 
+in the ./mpi and ./gaspi directories. 
   
 ==============================================================================
 3. Hardware and Software Requirements
