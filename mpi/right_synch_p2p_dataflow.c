@@ -18,7 +18,7 @@
 #include "data.h"
 #include "topology.h"
 #include "now.h"
-#include "success_or_die.h"
+#include "mm_pause.h"
 
 #include <malloc.h>
 #include <stdlib.h>

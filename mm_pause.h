@@ -1,5 +1,5 @@
-#ifndef SUCCESS_OR_DIE_H
-#define SUCCESS_OR_DIE_H
+#ifndef MM_PAUSE_H
+#define MM_PAUSE_H
 
 #include <stdlib.h>
 
