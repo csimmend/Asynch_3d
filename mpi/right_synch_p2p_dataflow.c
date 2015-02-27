@@ -20,11 +20,11 @@
 #include "now.h"
 #include "success_or_die.h"
 
+#include <malloc.h>
+#include <stdlib.h>
 #include <mpi.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <omp.h>
-
 
 
 /* global stage counters for comp */
@@ -72,9 +72,8 @@ int main (int argc, char *argv[])
  
   // align local array 
   const int CL_SZ = ((mSize+1) % CL) == 0 ? (mSize+1) : CL*(1+(mSize+1)/CL);
-  double* array = malloc (CL_SZ * (nThreads+1) * (K_SZ+1) * sizeof (double));
-  ASSERT (array != 0);  
-
+  double *array = memalign(CL* sizeof (double), CL_SZ * (nThreads+1) * (K_SZ+1) * sizeof (double));
+  ASSERT (array != NULL);  
 
 #pragma omp parallel default (none) shared(compStage, CL_SZ, \
 					   mSize, array, stdout, stderr)

@@ -124,7 +124,6 @@ int main (int argc, char *argv[])
       {
 	int const tid = omp_get_thread_num();  
 	gaspi_queue_id_t queue_id = 0;
-	MPI_Status status;
 	int k;
 
 	for (k = 1; k <= K_SZ; k++) 
